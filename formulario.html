@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Cadastro</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .error {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Formulário de Cadastro</h2>
+  <form id="cadastroForm" action="https://www.w3schools.com/action_page.php" method="post">
+    <fieldset>
+      <legend>Dados de Acesso</legend>
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" name="usuario" required><br>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required><br>
+      <label for="confirmarSenha">Confirmar Senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" required><br>
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required><br>
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required><br>
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione...</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="RS">Rio Grande do Sul</option>
+      </select><br>
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" required><br>
+      <label for="genero">Gênero:</label><br>
+      <input type="radio" id="masculino" name="genero" value="masculino" required>
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="feminino" name="genero" value="feminino" required>
+      <label for="feminino">Feminino</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferências</legend>
+      <label for="interesse">Interesses:</label><br>
+      <input type="checkbox" id="ads" name="interesse" value="ads">
+      <label for="ads">ADS</label>
+      <input type="checkbox" id="jogos" name="interesse" value="jogos">
+      <label for="jogos">Jogos</label>
+      <input type="checkbox" id="gestao_ti" name="interesse" value="gestao_ti">
+      <label for="gestao_ti">Gestão de TI</label>
+      <input type="checkbox" id="banco_dados" name="interesse" value="banco_dados">
+      <label for="banco_dados">Banco de Dados</label><br>
+      <label for="modelo">Modelo:</label><br>
+      <input type="radio" id="presencial" name="modelo" value="presencial" required>
+      <label for="presencial">Presencial</label>
+      <input type="radio" id="ead" name="modelo" value="ead" required>
+      <label for="ead">EAD</label>
+      <input type="radio" id="semi_presencial" name="modelo" value="semi_presencial" required>
+      <label for="semi_presencial">Semi presencial</label><br>
+    </fieldset>
+
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+
+</body>
+</html>
